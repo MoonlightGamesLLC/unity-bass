@@ -13,26 +13,34 @@ public class BassBehaviour : MonoBehaviour
     {
         status.text = "Initializing";
 
-		Encoder_Load();
+		EncoderLoad();
 	}
 
-	private void Encoder_Load()
+	private void EncoderLoad()
 	{
-		BassNet.Registration("zippo227@gmail.com", "test");
-
-		bool isInitialized = Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);
-		if (!isInitialized)
+		try
         {
+			BassNet.Registration("zippo227@gmail.com", "test");
+
+			bool isInitialized = Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_DEFAULT, IntPtr.Zero);
+			if (!isInitialized)
+			{
+				status.text = "Bass_Init error!";
+			}
+			else
+			{
+				status.text = "Bass_Init success!";
+			}
+
+			// init your recording device (we use the default device)
+			//if (!Bass.BASS_RecordInit(-1))
+			//	status.text = "Bass_RecordInit error!);
+		}
+		catch(Exception ex)
+        {
+			Debug.LogError(ex.Message);
 			status.text = "Bass_Init error!";
 		}
-        else
-        {
-			status.text = "Bass_Init success!";
-		}
-
-		// init your recording device (we use the default device)
-		//if (!Bass.BASS_RecordInit(-1))
-		//	status.text = "Bass_RecordInit error!);
 	}
 
 }
