@@ -16,7 +16,7 @@ Build to iOS and Android by going to File -> Build Settings
   
   Click Build
   
-    A special script runs on iOS to disable Bitcode sinc BASS does not support bitcode.
+    special script runs on iOS to disable Bitcode since BASS does not support bitcode.
     
 Application in Unity itself.
 
@@ -24,6 +24,4 @@ Application in Unity itself.
   
   The app starts and tries to initailize BASS. The status or an exception will be displayed. Goal is for it to say success.
 
-NOTE: 
-
-  The bass libraries might not all be fully updated to current versions.
+    The bass libraries might not all be fully updated to current versions.
