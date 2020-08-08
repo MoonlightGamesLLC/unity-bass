@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:padding="20dp" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Presets"></TextView>
+    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High bitrate" android:gravity="center_vertical" android:paddingRight="20dp"></TextView>
+            <Button android:text="1" android:id="@+id/ch1" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="0"></Button>
+            <Button android:text="2" android:id="@+id/ch3" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="2"></Button>
+            <Button android:text="3" android:id="@+id/ch5" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="4"></Button>
+            <Button android:text="4" android:id="@+id/ch7" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="6"></Button>
+            <Button android:text="5" android:id="@+id/ch9" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="8"></Button>
+        </TableRow>
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Low bitrate" android:gravity="center_vertical" android:paddingRight="20dp"></TextView>
+            <Button android:text="1" android:id="@+id/ch2" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="1"></Button>
+            <Button android:text="2" android:id="@+id/ch4" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="3"></Button>
+            <Button android:text="3" android:id="@+id/ch6" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="5"></Button>
+            <Button android:text="4" android:id="@+id/ch8" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="7"></Button>
+            <Button android:text="5" android:id="@+id/ch10" android:layout_height="wrap_content" android:onClick="Play" android:layout_width="0dp" android:layout_weight="1" android:tag="9"></Button>
+        </TableRow>
+    </TableLayout>
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Custom"></TextView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:id="@+id/custom" android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:text="http://" android:imeOptions="actionDone" android:inputType="text"></EditText>
+        <Button android:text="Open" android:layout_width="wrap_content" android:id="@+id/opencustom" android:onClick="Play" android:layout_height="wrap_content"></Button>
+    </LinearLayout>
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Currently playing" android:paddingTop="10dp"></TextView>
+    <LinearLayout android:layout_weight="1" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">
+        <TextView android:layout_weight="1" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/status1" android:layout_width="match_parent" android:gravity="center_horizontal" android:layout_height="wrap_content"></TextView>
+        <TextView android:layout_weight="1" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/status2" android:text="not playing" android:layout_width="match_parent" android:gravity="center_horizontal" android:layout_height="wrap_content"></TextView>
+        <TextView android:layout_weight="1" android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/status3" android:layout_width="match_parent" android:gravity="center_horizontal" android:layout_height="wrap_content" android:autoLink="web"></TextView>
+    </LinearLayout>
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Proxy server"></TextView>
+    <EditText android:id="@+id/proxy" android:layout_height="wrap_content" android:layout_width="match_parent" android:hint="[user:pass@]server:port" android:imeOptions="actionDone" android:inputType="text"></EditText>
+    <CheckBox android:layout_weight="1" android:id="@+id/proxydirect" android:layout_width="wrap_content" android:text="Direct connection" android:layout_height="wrap_content"></CheckBox>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:padding="10dp">
+		<Button android:id="@+id/open" android:layout_width="match_parent" android:layout_height="wrap_content" android:onClick="OpenClicked" android:text="press here to open a file" />
+		<TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:paddingTop="10dp" android:textAppearance="?android:attr/textAppearanceMedium" />
+		<SeekBar android:id="@+id/position" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="0" android:paddingTop="10dp" />
+    	<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="10dp">
+			<LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tempo" android:textAppearance="?android:attr/textAppearanceSmall" />
+				<SeekBar android:id="@+id/tempo" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="20" android:progress="10" />
+				<TextView android:id="@+id/bpm" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" />
+			</LinearLayout>
+			<CheckBox android:id="@+id/effects" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="EffectsClicked" android:text="Reverb &amp;&#10;Chorus" android:layout_marginLeft="10dp" android:checked="true" />
+		</LinearLayout>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lyrics" android:paddingTop="10dp" android:textAppearance="?android:attr/textAppearanceSmall" />
+		<TextView android:id="@+id/lyrics" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:minLines="3" android:gravity="center_horizontal" />
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Soundfont" android:paddingTop="10dp" android:textAppearance="?android:attr/textAppearanceSmall" />
+		<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+			<TextView android:id="@+id/fontinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:textAppearance="?android:attr/textAppearanceMedium" />
+			<Button android:id="@+id/openfont" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="OpenFontClicked" android:text="Replace" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

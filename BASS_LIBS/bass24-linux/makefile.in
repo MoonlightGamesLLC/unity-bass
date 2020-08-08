@@ -1,0 +1,12 @@
+FLAGS = -Os -I.. -L.. -L../x64 -lbass -lm -Wl,--no-warn-search-mismatch,-rpath,'$$ORIGIN/..:$$ORIGIN/../x64'
+FLAGS += $(foreach pkg,$(PACKAGES),`pkg-config $(pkg) --cflags --libs`)
+ifneq (,$(findstring libglade,$(PACKAGES)))
+FLAGS += -export-dynamic
+# path to glade file
+FLAGS += -D'GLADE_PATH="$(shell pwd)/"'
+endif
+
+.PHONY: all clean
+
+%: %.c
+	$(CC) $*.c $(FLAGS) -o $@

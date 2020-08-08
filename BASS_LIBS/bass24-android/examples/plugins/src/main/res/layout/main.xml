@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:orientation="vertical" android:padding="20dp" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loaded plugins"></TextView>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/plugins" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="10dp"></TextView>
+    <Button android:layout_height="wrap_content" android:id="@+id/open" android:onClick="OpenClicked" android:text="press here to open a file" android:layout_width="match_parent"></Button>
+    <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:id="@+id/info" android:paddingTop="10dp" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"></TextView>
+    <SeekBar android:id="@+id/position" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="0"></SeekBar>
+</LinearLayout>

@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "com.example.plugins"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../proguard-bass.pro'
+        }
+    }
+    sourceSets {
+        // BASS library files
+        main.java.srcDirs += '../../java'
+        main.jniLibs.srcDirs += '../../libs'
+        // BASS add-ons
+        main.jniLibs.srcDirs += '../../bassalac/libs'
+        main.jniLibs.srcDirs += '../../bassdsd/libs'
+        main.jniLibs.srcDirs += '../../bassflac/libs'
+        main.jniLibs.srcDirs += '../../basshls/libs'
+        main.jniLibs.srcDirs += '../../bassopus/libs'
+        main.jniLibs.srcDirs += '../../basswv/libs'
+    }
+}
