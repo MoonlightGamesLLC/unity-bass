@@ -1,5 +1,7 @@
 # unity-bass
-A bass library made with Unity.
+# A BASS.NET library made with Unity. https://www.un4seen.com/
+
+I made this repository to help document the setup of bass in unity. With your help we can make it capable of running on Windows, macOS, Linux, iOS, and Android in Unity.
 
 If you don't have Unity. Download Unity Hub now! https://unity3d.com/get-unity/download
 
